@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 실습문제 8-7 </title>
+        <script>
+            let degree=90;
+            function rotate(obj){
+                obj.style.transform=rotate(${degree}deg);
+                degree = (degree + 90) % 360;
+            }
+        </script>
+    </head>
+    <body>
+        <h3> 클릭하면 90&deg; 회전합니다.</h3>
+        <hr>
+        <img src="../Image/sponge.jpg" width="100" onclick="rotate(this);">
+    </body>
+</html>
+
+var n=90;
+function rotate(obj) {
+	obj.style.transform = "rotate(" + n + "deg)";
+	n += 90;
+	n %= 360;
+}

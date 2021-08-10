@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>어지러워요</title>
+        <style>
+        @keyframes second{
+            0%{ transform: rotate(-90deg);}
+            50%{ transform: rotate(90deg);}
+            100%{ transform: rotate(-90deg);}
+        }
+        span{
+            animation-name: second;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+        </style>
+    </head>
+    <body>
+        <h3>어지러워요</h3>
+        <hr>
+        <span>
+            <img src="./sponge.jpg" height="200" width="200">
+        </span> 
+    </body>
+</html>

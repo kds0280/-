@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>실습6-3-3</title>
+
+    </head>
+
+    <body>
+
+        <h3>document.write()로 표만들기</h3>
+
+        <hr>
+
+        <script>
+
+            document.writeln("<table border = 1>");
+
+            document.writeln("<tr>");
+
+            document.writeln("<th>n</th>") /*볼드체로 나오기 위해서*/
+
+            for(let i = 0; i<10; i++){
+
+                document.writeln("<td>"+i+"</td>");
+
+            }
+
+            document.writeln("</tr>");
+
+            document.writeln("<tr>");
+
+            document.writeln("<th>n<sup>2</sup></th>") /*제곱 표기법*/
+
+            for(let i = 0; i<10; i++){
+
+                document.writeln("<td>"+i*i+"</td>");
+
+            }
+
+            document.writeln("</tr>");
+
+            document.writeln("</table>");
+
+        </script>
+
+    </body>
+
+</html>

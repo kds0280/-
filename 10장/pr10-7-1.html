@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 실습 10-7 </title>
+        <style>
+            label {
+                display: inline-block;
+                width: 80px;
+            }
+            button {
+                margin-right: 35px;
+            }
+        </style>
+        <script>
+            function check() {
+                let nCorrect = 0
+                let probs = document.querySelectorAll("label")
+                let inputs = document.querySelectorAll("input")
+                for(let i=0; i<probs.length; i++) {
+                    if(eval(probs[i].innerHTML) == inputs[i].value) {
+                        nCorrect += 1
+                    }
+                    else {
+                        probs[i].style.textDecoration = "line-through"
+                    }
+                }
+                document.querySelector("span").innerHTML = nCorrect
+
+            }
+        </script>
+    </head>
+    <body>
+        <h3> 산수 문제를 풀어봅시다. </h3>
+        <p> 수식을 계산하여 답을 입력하고 채점 버튼을 누르세요. </p>
+        <hr>
+        <form>
+            <label>5 + 6</label> <input type="text"> <br>
+            <label>7 + 5*3</label> <input type="text"> <br>
+            <label>23*2</label> <input type="text"> <br>
+            <label>35-7</label> <input type="text"> <br>
+            <button type="button" onclick="check();">채점</button>
+            <span> 0 </span>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Image</title>
+    </head>
+    <body>
+        <img id ="fig1" src="./sponge.jpg">
+        <script>
+            let img = document.querySelector("#fig1")
+            img.src = './mango.jpg'
+            img.onload = function(){
+            console.log(img.width)
+            }
+        </script>
+    </body>
+</html>

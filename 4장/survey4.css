@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300&display=swap&subset=korean');
+body{
+    background-color: aliceblue;
+}
+strong{
+    font-family: none;
+}
+p{
+    font-family:'Sunflower', sans-serif;
+}
+label{
+    color: blueviolet;
+}
+footer{
+    border-radius: 10px;
+    background-color: orange;
+}
+section{
+    background-color: pink;
+}
+h3{
+    color: brown;
+    text-align: center;
+    font-size: 2em;
+}

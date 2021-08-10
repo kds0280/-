@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 실습문제 8-1 </title>
+    </head>
+    <body>
+        <h3>라면을 끓이는 순서</h3>
+        <hr>
+        <ol type='A' onclick="this.style.backgroundColor='yellowgreen';">
+            <li>물을 끓인다.</li>
+            <li>라면과 스프를 넣는다.</li>
+            <li>파를 썰어 넣는다.</li>
+            <li>5분 후 <strong>맛있게</strong> 먹는다.</li> 
+        </ol>
+        <script>
+            let liArray = document.getElementByTagName("li") /*Array 아니라 collection이니까 슬래싱안됨*/
+            /*let liArray = document.querySelector첫번째 요소만 보여줘 All로 하면 다 보여줘 이건 통합하는 것*/
+            /*let liArray = document.querySelectorAll("")*/
+            for(let li of liArray) { /*for 써서 끝까지 ++이런식으로 해도 됨*/
+                li.style.color = "green"
+            }
+        </script>
+
+    </body>
+</html>

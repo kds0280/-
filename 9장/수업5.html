@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Image Select</title>
+        <script>
+            let imgefiles = [
+            "../4장/smart1.jpg",
+            "../4장/smart2.png",
+            "../4장/smart3.jpg",
+            "../4장/smart4.jpg"
+            ]
+            let imgs = []
+            for(let i = 0;i<imgefiles.length;i++){
+                let img = new Image()
+                img.src = imgefiles[i]
+                imgs.push(img)
+            }
+            let nextImg = 1
+            function chImg(img){
+                img.src = imgs[nextImg].src
+                nextImg = (nextImg +1) % imgs.length //숫자가 너무 커지면 안되니까 다시 0이 될 수 있도록 해놨음
+            }
+        </script>
+        <style>
+        img{
+            border: 20px ridge wheat;
+        }
+        </style>
+    </head>
+    <body>
+        <h3> new Image()로 이미지 로딩</h3>
+        <hr>
+        <p>
+            이미지를 클릭하면 다음 이미지를 보여줍니다.
+        </p>
+        <br>
+        <img src="../4장/smart1.jpg" width="200" onclick="chImg(this)">
+    </body>
+</html>

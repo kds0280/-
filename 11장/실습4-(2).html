@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>사진과 이름 출력</title>
+    </head>
+    <body>
+        <h3>사진과 이름 출력</h3>
+        <hr>
+        <canvas id="myCanvas" width="400" height="220" style="background-color: aliceblue;"></canvas>
+        <script>
+        let canvas = document.getElementById("myCanvas")
+        let context = canvas.getContext("2d")
+
+        let img = new Image()
+        img.onload = function(){
+            context.drawImage(img, 20, 20, 100, 100)
+        }
+        img.src = "../Image/sponge.jpg"
+
+        context.fillStyle = "violet"
+        context.strokeStyle = "blue"
+        context.lineWidth = 3
+        context.font = "italic 50px forte"
+        context.strokeText("Spongebob", 70, 80)
+        context.fillText("Spongebob", 70, 80)
+        </script>
+    </body>
+</html>

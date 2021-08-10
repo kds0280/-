@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 실습 10-7 </title>
+        <style>
+            label {
+                display: inline-block;
+                width: 80px;
+            }
+            button {
+                margin-right: 35px;
+            }
+            span {
+                display: inline-block;
+                margin-right: 20px;
+            }
+        </style>
+        <script>
+            function check() {
+                let nCorrect = 0
+                let probs = document.querySelectorAll("label")
+                let inputs = document.querySelectorAll("input")
+                for(let i=0; i<probs.length; i++) {
+                    if(Math.floor(eval(probs[i].innerHTML)) == inputs[i].value) {
+                        nCorrect += 1
+                    }
+                    else {
+                        probs[i].style.textDecoration = "line-through"
+                    }
+                }
+                document.querySelector("span").innerHTML = nCorrect
+
+            }
+            function again() {
+                let probs = document.querySelectorAll("label")
+                let inputs = document.querySelectorAll("input")
+                for(i=0; i<probs.length; i++) {
+                    let prob=""
+                    prob += Math.floor(Math.random()*100) + 1
+                    switch(Math.floor(Math.random()*4)) {
+                        case 0: prob += "+"; break
+                        case 1: prob += "-"; break
+                        case 2: prob += "*"; break
+                        case 3: prob += "/"; break
+                    }
+                    prob += Math.floor(Math.random()*100) + 1
+                    probs[i].innerHTML = prob;
+                    probs[i].style.textDecoration="none"
+                    inputs[i].value = ""
+                }
+                document.querySelector("span").innerHTML = 0;
+            }
+        </script>
+    </head>
+    <body onload="again();">
+        <h3> 산수 문제를 풀어봅시다. </h3>
+        <p> 수식을 계산하여 답을 입력하고 채점 버튼을 누르세요. </p>
+        <hr>
+        <form>
+            <label></label> <input type="text"> <br>
+            <label></label> <input type="text"> <br>
+            <label></label> <input type="text"> <br>
+            <label></label> <input type="text"> <br> <br>
+            <button type="button" onclick="check();">채점</button>
+            <span> 0 </span>
+            <button type="button" onclick="again();">다시</button>
+        </form>
+    </body>
+</html>

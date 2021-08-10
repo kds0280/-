@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>실습6-7</title>
+
+    </head>
+
+    <body>
+
+        <h3>큰 자리수와 낮은 자리수 같은지 비교(해결못함 사연이 한테 받기)</h3>
+
+        <hr>
+
+        <script>
+
+            let input = prompt("숫자 입력:"); /*인풋 타입은 string*/
+
+            input = parseInt(input); /*스트링 숫자로 바꿔줌*/
+
+            if(!input){
+
+                document.write("잘못 입력하셨습니다."); /*사용자가 입력을 잘못했을 경우 숫자가 아니여브러*/
+
+            }
+
+            else {
+
+                let last = input % 10;
+
+                let first = input;
+
+                while(first >= 10){
+
+                    first/= 10; /*계속 10으로 나눠*/
+
+                }
+
+                first = Math.floor(first);/*자바 스크립트는 /쓰면 실수로 변함*/
+
+                if(last == first){
+
+                    document.write(input + ": 같음");
+
+                }
+
+                else{
+
+                    document.wirte(input + ": 다름" + first + ":" + last);
+
+                }
+
+            }
+
+
+        </script>
+
+    </body>
+
+</html>

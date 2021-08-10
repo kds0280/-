@@ -1,0 +1,36 @@
+h1{ 
+    text-align: center;
+
+}
+header{
+    position: absolute;
+    background-color: greenyellow;
+    display: inline-block;
+    width: 100%;
+}
+nav{
+    position: absolute;
+    background-color: orangered;
+    height: 45em;
+    top: 13em;
+    width: 10em;
+    bottom: 10em;
+}
+
+section{
+    top: 13em;
+    left: 10em;
+    position: absolute;
+    background-color: skyblue;  
+}
+footer{
+    position: absolute;
+    top: 57em;
+    background-color: violet;
+    display: block;
+    width: 100em;
+}
+body{
+    margin: 0px;
+   
+}

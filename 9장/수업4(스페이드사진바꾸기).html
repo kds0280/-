@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Image Select</title>
+        <script>
+            function chImg(){
+                let sel = document.querySelector("#sel")
+                let img = document.querySelector("img")
+                img.src = sel.options[sel.selectedIndex].value
+                img.onload = function(){
+                    let span= document.querySelector("span")
+                    span.innerHTML = img.width + " X " + img.height
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h3>onload로 이미지 크리 출력</h3>
+        <hr>
+        <form>
+            <select id="sel" onchange="chImg()">
+                <option value="../4장/smart2.png">다이아몬드</option>
+                <option value="../4장/smart3.jpg">스페이드</option>
+                <option value="../4장/smart4.jpg">클로버</option>
+                <option value="../4장/smart1.jpg" selected>하트</option>
+            </select>&nbsp;&nbsp;
+            <span id="sz"></span>
+        </form>
+        <img src="../4장/smart1.jpg">
+    </body>
+</html>

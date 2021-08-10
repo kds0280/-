@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        td{
+            width: 100;
+            text-align: right;
+        }
+        </style>
+        <script>
+        function draw(){
+            let x = document.getElementById("x").value
+            let y = document.getElementById("y").value
+            let width = document.getElementById("width").value
+            let height = document.getElementById("height").value
+            let line = document.getElementById("line").value
+            let color = document.getElementById("color").value
+            let won = document.getElementById("won").value
+            let where = document.getElementById("where").value
+            let canvas = document.getElementById("myCanvas")
+            let context = canvas.getContext("2d")
+
+            context.beginPath()
+            context.strokeStyle = color
+            context.linewidth = width
+            context.arc(x,y, won, width*Math.Pi, height*Math.Pi, where)
+            context.stroke()
+        }
+        function erase(){
+            let canvas = document.getElementById("myCanvas")
+            let context = canvas.getContext("2d")
+
+            context.beginPath()
+        }
+        </script>
+    </head>
+    <body>
+        <h3>폼으로 원호 그리기</h3>
+        <hr>
+        <form>
+            <table>
+                <tr><td><label>x <input type="number" id="x"></label></td>
+                    <td><label>y <input type="number" id="y"></label></td>
+                </tr>
+                <tr>
+                    <td><label>반지름 <input type="number" id="won"></label></td>
+                    <td><label>방향 
+                        <select id="where">
+                            <option value="false">시계방향</option>
+                            <option value="true">반시계방향</option>
+                        </select></label></td>
+                </tr>
+                <tr><td><label>시작각도 <input type="number" id="width"></label></td>
+                    <td><label>골각도 <input type="number" id="height"></label></td>
+                </tr>
+                <tr><td><label>선굵기<input type="number" id="line"></label></td>
+                <td><label>선색 <input type="color" id="color"></label></td></tr>
+                <tr>
+                    <td><button type="button" onclick="draw()">그리기</button></td>
+                    <td><button type="button" onclick="erase()">지우기</button></td>
+                </tr>
+                <canvas id="myCanvas" width="400" height="300" style="background-color: aliceblue;"></canvas>
+            </table>
+        </form>
+    </body>
+</html>

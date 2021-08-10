@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <meta charset="utf-8">
+
+        <title>실습6-5</title>
+
+    </head>
+
+    <body>
+
+        <h3>암호를 입력하라!</h3>
+
+        <hr>
+
+        <script>
+
+            let pw =  prompt("암호를 대라");
+
+            while( pw!= "you"){
+
+                document.write("틀린암호!");
+
+                pw = prompt("암호를 대라") /* prompt가 먼저 나와 크롬에선 그런가봄 여러분들이 고쳐요*/
+
+            } 
+
+            document.write("성공했당!");
+
+        </script>
+
+    </body>
+
+</html>

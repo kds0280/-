@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>실습 11-5</title>
+        <style>
+            label {
+                display: inline-block;
+                width: 60px;
+            }
+            .right {
+                margin-left: 120px;
+            }
+            button {
+                margin-left: 180px;
+            }
+        </style>
+        <script>
+                let canvas, context
+                function init() {
+                    canvas = document.getElementById("myCanvas")
+                    context = canvas.getContext("2d")
+                }
+                function drawRect() {
+                    let x = parseInt(document.querySelector("#x").value)
+                    let y = parseInt(document.querySelector("#y").value)
+                    let w = parseInt(document.querySelector("#w").value)
+                    let h = parseInt(document.querySelector("#h").value)
+                    let lw = parseInt(document.querySelector("#lw").value)
+                    let c = document.querySelector("#c").value
+                    context.lineWidth = lw
+                    context.strokeStyle = c
+                    context.strokeRect(x, y, w, h)
+                }
+                function eraseAll() {
+                    context.clearRect(0,0,canvas.width, canvas.height)
+                }
+            </script>
+    </head>
+    <body onload="init()">
+        <h3>폼으로 사각형 그리기</h3>
+        <hr>
+        <form>
+            <label>x</label> <input id="x" type="text">
+            <label>y</label> <input id="y" type="text"> <br>
+            <label>width</label> <input id="w" type="text">
+            <label>height</label> <input id ="h" type="text"> <br>
+            <label>선굵기</label> <input id="lw" type="text">
+            <label class="right">선색</label> <input id ="c" type="color"> <br>
+            <button type="button" onclick="drawRect()">그리기</button>
+            <button type="button" onclick="eraseAll()">지우기</button>
+        </form>
+        <br>
+        <canvas id="myCanvas" width="450" height="300"
+        style="background-color: aliceblue;"></canvas>
+        
+    </body>
+</html>

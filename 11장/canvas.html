@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>canvas</title>
+    </head>
+    <body>
+        <canvas width="400" height="400" style="background-color:aliceblue"></canvas>
+        <script>
+            let ctx=document.querySelector("canvas").getContext("2d")
+            ctx.lineWidth = "40"
+            ctx.beginPath()
+            ctx.arc(150, 150, 50, 0, Math.PI*1.5)
+            ctx.stroke();
+            ctx.clearRect(0,0, 150, 150)
+        </script>
+    </body>
+
+</html>
