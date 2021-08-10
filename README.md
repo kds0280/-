@@ -1,2 +1,2 @@
 # :camera: 명품 웹 프로그래밍
-![image](https://user-images.githubusercontent.com/58512335/128809905-f4e7b726-6996-486b-82bb-d1f818886fbd.png)
+![image](https://user-images.githubusercontent.com/58512335/128809935-dcf3c828-499f-4e42-b188-11b3142096f4.png)
